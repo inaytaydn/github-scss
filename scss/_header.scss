@@ -1,0 +1,213 @@
+@import "./general-variables";
+
+header{
+   background-color: $grey;   
+   display: flex;
+   flex-direction: column;
+   padding:0.8rem 0.8rem 0 0.8rem;
+   gap: 1rem;
+   border-bottom:1px solid $border-color;
+   
+
+ 
+   .up-header{
+
+display: flex;
+justify-content: space-between;
+align-items: center;
+
+button{
+padding: 0.5rem;  
+border: 1px solid $border-color;
+border-radius: 5px;
+background-color: transparent;
+
+&:hover {
+    background-color: $hover-btn;
+}
+
+
+}
+
+    .left{
+       display: flex;
+       align-items: center;
+       gap: 0.6rem;
+       .github-img{
+font-size: 30px;
+
+      }
+      p{
+
+         padding: 6px;
+         border-radius: 6px;
+         font-size: 1rem;
+         
+        &:hover{
+            background-color: $hover-btn;
+
+        }
+      }
+    }
+      .right{
+    display: flex;
+    gap: 0.5rem;
+    .search{
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        min-width: 260px;
+
+        &:hover {
+         background-color: transparent;
+        }
+        
+    p span {
+        border: 1px solid $border-color;
+        padding: 1px 6px ;
+        border-radius: 3px;
+        margin: 0px 5px;
+    }
+
+    }
+
+    img{
+      width: 32px;
+      border-radius: 100%;
+  }
+}
+
+
+
+}
+
+
+nav{
+
+
+   display: flex;
+   gap: 1rem;
+  
+
+.nav-btn{
+    padding: 0.5rem;  
+border: 1px solid $border-color;
+border-radius: 5px;
+background-color: transparent;
+margin-left: auto;
+display: none;
+
+}
+   button{
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    background-color: transparent;
+   color: rgb(92, 92, 92);
+   font-size: .9rem;
+
+border: none;
+padding: 6px;
+border-radius: 6px;
+margin-bottom: .5rem;
+
+&:first-child{
+   border-radius: 0 ;
+border-bottom: 2px solid orangered;
+padding-bottom: .5rem;
+margin-bottom: 0;
+color: black;
+}
+
+&:hover {
+    background-color: $hover-btn;
+}
+.number{
+    background-color: $hover-btn;
+    padding: 3px;
+    border-radius: 100%;
+    font-size: 0.8em;
+    font-weight: 600;
+}
+
+   }
+   
+  }
+}
+
+
+
+
+
+@media screen and (max-width:800px){
+
+
+    header {
+    
+        .up-header {
+    .right {
+            .search {
+min-width: auto;
+        p {
+            display: none;
+        }
+        }
+
+
+        .ghost-btn {
+            display: none;
+        }
+
+    }
+        }
+        nav{
+            
+            button:nth-of-type(5) {
+display: none;
+            }
+
+            .nav-btn{
+                display:inline;
+            }
+
+        }
+    }
+    }
+
+
+    @media screen and (max-width:650px){ 
+
+        header {
+
+            nav {
+                button:nth-of-type(4){
+display: none;
+                }
+            }
+        }
+    }
+  
+    @media screen and (max-width:450px){ 
+
+        header {
+
+            nav {
+                button:nth-of-type(3){
+display: none;
+                }
+            }
+        }
+    }
+  
+    @media screen and (max-width:350px){ 
+
+        header {
+
+            nav {
+                button:nth-of-type(2){
+display: none;
+                }
+            }
+        }
+    }
+  
